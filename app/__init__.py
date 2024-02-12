@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from app.models import Student , Notes
@@ -21,9 +21,9 @@ migrate = Migrate(app, db)
 
 # Import routes after creating app and db to avoid circular imports
 import app.student_route as student_route
-import app.notes_route as notes_route
+
 
 import app.student_route as student_route
-import app.notes_route as notes_route
+
 from app.models import Student , Notes
 
